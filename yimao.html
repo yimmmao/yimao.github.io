@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Yimao</title>  
+    <style>  
+        body {  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+            overflow: hidden;  
+            background: linear-gradient(45deg, #f3ec78, #af4261);  
+            animation: backgroundAnimation 10s ease infinite;  
+        }  
+  
+        @keyframes backgroundAnimation {  
+            0% { background-position: 0% 50%; }  
+            50% { background-position: 100% 50%; }  
+            100% { background-position: 0% 50%; }  
+        }  
+  
+        img {  
+            max-width: 50%;  
+            max-height: 50%;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
+        }  
+  
+        .message {  
+            font-size: 2rem;  
+            color: white;  
+            margin-top: 20px;  
+            text-align: center;  
+        }  
+  
+        .hidden {  
+            display: none;  
+        }  
+  
+        .btn {  
+            margin-top: 20px;  
+            padding: 10px 20px;  
+            font-size: 1rem;  
+            background-color: #af4261;  
+            color: white;  
+            border: none;  
+            cursor: pointer;  
+            border-radius: 5px;  
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
+            text-decoration: none;  
+            text-align: center;  
+        }  
+  
+        .btn:hover {  
+            background-color: #f3ec78;  
+        }  
+  
+        .btn-container {  
+            display: flex;  
+            gap: 20px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <img src="images/ermao.jpg" alt="ermao">  
+    <div class="message" id="message">臭屁大懒毛</div>  
+    <button id="revealBtn" class="btn">点击这里</button>  
+    <div class="message hidden" id="additionalMessage">有你在，我的生活充满了阳光！</div>  
+    <div class="btn-container">  
+        <a href="wgs.html" class="btn">武功山</a>  
+        <a href="jxsd.html" class="btn">江西师大</a>  
+        <a href="jzz.html" class="btn">橘子洲</a>  
+        <a href="wh.html" class="btn">武汉</a>  
+        <a href="cpm.html" class="btn">漂亮毛</a>  
+    </div>  
+  
+    <script>  
+        document.getElementById('revealBtn').addEventListener('click', function() {  
+            document.getElementById('additionalMessage').classList.remove('hidden');  
+        });  
+    </script>  
+</body>  
+</html>
